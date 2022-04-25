@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import { Nav, Navbar, NavDropdown, NavLink, Container, Form, FormControl, Button} from 'react-bootstrap'
 
-export default function App() {
+export default function Header() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
     <Container>
@@ -32,7 +32,7 @@ export default function App() {
             <NavDropdown.Item href="#discord">Discord</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Account" id="basic-nav-dropdown">
-            <NavDropdown.Item href="login">Login</NavDropdown.Item>
+            <NavDropdown.Item href="#login">Login</NavDropdown.Item>
             <NavDropdown.Item href="#register">Register</NavDropdown.Item>
           </NavDropdown>
         </Nav>
@@ -41,5 +41,3 @@ export default function App() {
   </Navbar>
   );
 }
-
-
