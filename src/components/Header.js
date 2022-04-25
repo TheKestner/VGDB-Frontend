@@ -1,4 +1,3 @@
-import './App.css';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -33,7 +32,7 @@ export default function Header() {
           </NavDropdown>
           <NavDropdown title="Account" id="basic-nav-dropdown">
             <NavDropdown.Item href="login">Login</NavDropdown.Item>
-            <NavDropdown.Item href="#register">Register</NavDropdown.Item>
+            <NavDropdown.Item href="register">Register</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
