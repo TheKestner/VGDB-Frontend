@@ -1,4 +1,5 @@
 import React from "react";
+import { getData } from '../utils/data';
 
 export default function Game() {
     return (
