@@ -1,14 +1,10 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 import { Nav, Navbar, NavDropdown, NavLink, Container, Form, FormControl, Button} from 'react-bootstrap'
+import { Outlet } from "react-router-dom";
 
 export default function Header() {
   return (
+    <div>
     <Navbar bg="dark" variant="dark" expand="lg">
     <Container>
       <Navbar.Brand href="/">VGDB</Navbar.Brand>
@@ -25,7 +21,7 @@ export default function Header() {
         <Button variant="outline-info">Search</Button>
       </Form>
           <NavDropdown title="Games" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#home">Discover</NavDropdown.Item>
+            <NavDropdown.Item href="/">Discover</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Community" id="basic-nav-dropdown">
             <NavDropdown.Item href="#discord">Discord</NavDropdown.Item>
@@ -38,5 +34,7 @@ export default function Header() {
       </Navbar.Collapse>
     </Container>
   </Navbar>
+  <Outlet />
+  </div>
   );
 }
