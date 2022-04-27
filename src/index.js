@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import Game from './components/Game';
-import Detail from './components/Game';
+import Slider from './components/Splide';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +18,7 @@ root.render(
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="game" element={<Game />}/>
+        <Route path="slider" element={<Slider />}/>
         </Route>
       </Routes>
     </BrowserRouter>
