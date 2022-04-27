@@ -6,9 +6,15 @@ import { Container, Card } from "react-bootstrap";
 
 
 export default function Slider() {
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        getData()
+        .then((data) => {
+        setItems(data)
+        })
+    
+    },[]);
       
-
-
   return (
     <Container>
     <Splide options={ {
@@ -71,3 +77,9 @@ export default function Slider() {
   </Container>
   );
 }
+
+// const Detail = ({ item }) => {
+//     return (
+//       <img src={item.coverart}></img>
+//     )
+//   }
