@@ -17,7 +17,6 @@ export default function Game() {
       <div>
         <h2> </h2>
             {items
-            .filter(item => item.title === 'Hatoful Boyfriend')
             .map((item) => <Detail key={item.id} item={item} />)}
       </div>
     );
