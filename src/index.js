@@ -6,7 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
-import Game from './components/Games';
+import Game from './components/Game';
+import Detail from './components/Game';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,7 +17,7 @@ root.render(
         <Route path="/" element={<App />}>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path ="game" element={<Game />} />
+        <Route path="game" element={<Game />}/>
         </Route>
       </Routes>
     </BrowserRouter>
