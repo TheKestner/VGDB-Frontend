@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Game from './components/Game';
 import Slider from './components/Slider';
+import Home from './components/Home';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,7 +16,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-        <Route path="" element={<Slider />} />
+        <Route path="" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="game" element={<Game />}/>
