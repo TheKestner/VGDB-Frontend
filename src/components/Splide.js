@@ -6,11 +6,6 @@ import { Container, Card } from "react-bootstrap";
 
 
 export default function Slider() {
-    let splide = new Splide( '.splide', {
-        type   : 'loop',
-        perPage: 3,
-        perMove: 1,
-      } );
       
 
 
@@ -18,8 +13,6 @@ export default function Slider() {
     <Container>
     <Splide options={ {
         type: 'loop',
-        width : 2000,
-        gap   : '20rem',
         perPage: 4,
         perMove: 1,
       } } 
