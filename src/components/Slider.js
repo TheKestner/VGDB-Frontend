@@ -4,13 +4,6 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { Container, Card } from "react-bootstrap";
 
-const Detail = ({ item }) => {
-    return (
-    <>
-      {item.title}
-    </>
-    )
-  }
   
 export default function Slider() {
     const [items, setItems] = useState([]);
@@ -22,10 +15,17 @@ export default function Slider() {
     
     },[]);
 
-    let title1 = items.filter(item => item.title === 'Hatoful Boyfriend').map((item) => <Detail key={item.id} item={item}/>)
-    let title2 = items.filter(item => item.title === 'Hades').map((item) => <Detail key={item.id} item={item}/>)
-    let title3 = items.filter(item => item.title === 'Elden Ring').map((item) => <Detail key={item.id} item={item}/>)
-    let title4 = items.filter(item => item.title === 'God of War').map((item) => <Detail key={item.id} item={item}/>)
+    let title1 = items.filter(item => item.title === 'Hatoful Boyfriend')
+    .map((item) => <Detail key={item.id} item={item}/>)
+
+    let title2 = items.filter(item => item.title === 'Hades')
+    .map((item) => <Detail key={item.id} item={item}/>)
+
+    let title3 = items.filter(item => item.title === 'Elden Ring')
+    .map((item) => <Detail key={item.id} item={item}/>)
+
+    let title4 = items.filter(item => item.title === 'God of War')
+    .map((item) => <Detail key={item.id} item={item}/>)
     
       
   return (
@@ -45,7 +45,7 @@ export default function Slider() {
         <Card.Body>
             <Card.Title> {title1} </Card.Title>
             <Card.Text>
-            Some quick example text
+            Genre
             </Card.Text>
         </Card.Body>
     </Card>
@@ -57,7 +57,7 @@ export default function Slider() {
         <Card.Body>
             <Card.Title> {title2} </Card.Title>
             <Card.Text>
-            Some quick example text
+            Genre
             </Card.Text>
         </Card.Body>
     </Card>
@@ -69,7 +69,7 @@ export default function Slider() {
         <Card.Body>
             <Card.Title> {title3} </Card.Title>
             <Card.Text>
-            Some quick example text
+            Genre
             </Card.Text>
         </Card.Body>
     </Card>
@@ -81,16 +81,25 @@ export default function Slider() {
         <Card.Body>
             <Card.Title> {title4} </Card.Title>
             <Card.Text>
-            Some quick example text
+            Genre
             </Card.Text>
         </Card.Body>
     </Card>
-    </SplideSlide>
-
+    </SplideSlide> 
+    
   </Splide>
   </Container>
   );
 }
+
+
+const Detail = ({ item }) => {
+    return (
+    <>
+      {item.title}
+    </>
+    )
+  }
 
 
 
