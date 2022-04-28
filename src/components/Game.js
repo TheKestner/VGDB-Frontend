@@ -19,7 +19,7 @@ export default function Game() {
       <div>
         <h2> </h2>
         {items
-        .filter(item => item.id == id)
+        .filter(item => item.title == id)
         .map((item) => <Detail key={item.id} item={item} />)}
       </div>
     );
