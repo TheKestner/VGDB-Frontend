@@ -15,6 +15,7 @@ export default function Slider() {
     
     },[]);
 
+    // Title for each
     let title1 = items.filter(item => item.title === 'Hatoful Boyfriend')
     .map((item) => <Detail key={item.id} item={item}/>)
 
@@ -26,6 +27,19 @@ export default function Slider() {
 
     let title4 = items.filter(item => item.title === 'God of War')
     .map((item) => <Detail key={item.id} item={item}/>)
+
+    // Genre for each
+    let genre1 = items.filter(item => item.title === 'Hatoful Boyfriend')
+    .map((item) => <Genre key={item.id} item={item}/>)
+
+    let genre2 = items.filter(item => item.title === 'Hades')
+    .map((item) => <Genre key={item.id} item={item}/>)
+
+    let genre3 = items.filter(item => item.title === 'Elden Ring')
+    .map((item) => <Genre key={item.id} item={item}/>)
+
+    let genre4 = items.filter(item => item.title === 'God of War')
+    .map((item) => <Genre key={item.id} item={item}/>)
     
       
   return (
@@ -47,7 +61,7 @@ export default function Slider() {
         <Card.Body>
             <Card.Title> {title1} </Card.Title>
             <Card.Text>
-            Genre
+            {genre1}
             </Card.Text>
         </Card.Body>
     </Card>
@@ -61,7 +75,7 @@ export default function Slider() {
         <Card.Body>
             <Card.Title> {title2} </Card.Title>
             <Card.Text>
-            Genre
+            {genre2}
             </Card.Text>
         </Card.Body>
     </Card>
@@ -75,7 +89,7 @@ export default function Slider() {
         <Card.Body>
             <Card.Title> {title3} </Card.Title>
             <Card.Text>
-            Genre
+            {genre3}
             </Card.Text>
         </Card.Body>
     </Card>
@@ -89,7 +103,7 @@ export default function Slider() {
         <Card.Body>
             <Card.Title> {title4} </Card.Title>
             <Card.Text>
-            Genre
+            {genre4}
             </Card.Text>
         </Card.Body>
     </Card>
@@ -109,6 +123,13 @@ const Detail = ({ item }) => {
     )
   }
 
+const Genre = ({ item }) => {
+    return (
+    <>
+      {item.genre[0]}
+    </>
+    )
+  }
 
 //   <Card style={{ width: '15rem' }}>
 //   <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1uul.png" alt="Image 1"/>
