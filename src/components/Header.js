@@ -1,7 +1,9 @@
 import React from "react";
 import { Nav, Navbar, NavDropdown, NavLink, Container, Form, FormControl, Button} from 'react-bootstrap'
+import { useParams } from "react-router-dom";
 
 export default function Header() {
+
   return (
     <div>
     <Navbar bg="dark" variant="dark" expand="lg">
@@ -36,3 +38,13 @@ export default function Header() {
   </div>
   );
 }
+
+
+
+// let { id } = useParams();
+
+// function handleSubmit(e) {
+//   e.preventDefault();
+//   e.id = id
+//   console.log('You clicked search.');
+// }

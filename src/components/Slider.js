@@ -4,7 +4,14 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { Container, Card } from "react-bootstrap";
 
-
+const Detail = ({ item }) => {
+    return (
+    <>
+      {item.title}
+    </>
+    )
+  }
+  
 export default function Slider() {
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -15,12 +22,16 @@ export default function Slider() {
     
     },[]);
 
-    let pic = items.filter(item => item.title === 'Hatoful Boyfriend').map((item) => <Detail key={item.id} item={item}/>)
-    console.log(pic)
+    let title1 = items.filter(item => item.title === 'Hatoful Boyfriend').map((item) => <Detail key={item.id} item={item}/>)
+    let title2 = items.filter(item => item.title === 'Hades').map((item) => <Detail key={item.id} item={item}/>)
+    let title3 = items.filter(item => item.title === 'Elden Ring').map((item) => <Detail key={item.id} item={item}/>)
+    let title4 = items.filter(item => item.title === 'God of War').map((item) => <Detail key={item.id} item={item}/>)
+    
       
   return (
     <Container>
-    <Splide options={ {
+    <Splide default
+        options={ {
         type: 'loop',
         perPage: 4,
         perMove: 1,
@@ -32,7 +43,7 @@ export default function Slider() {
     <Card style={{ width: '15rem' }}>
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1uul.png" alt="Image 1"/>
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title> {title1} </Card.Title>
             <Card.Text>
             Some quick example text
             </Card.Text>
@@ -44,7 +55,7 @@ export default function Slider() {
     <Card style={{ width: '15rem' }}>
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co39vc.png" alt="Image 2" />
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title> {title2} </Card.Title>
             <Card.Text>
             Some quick example text
             </Card.Text>
@@ -56,7 +67,7 @@ export default function Slider() {
     <Card style={{ width: '15rem' }}>
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.png" alt="Image 3" />
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title> {title3} </Card.Title>
             <Card.Text>
             Some quick example text
             </Card.Text>
@@ -68,7 +79,7 @@ export default function Slider() {
     <Card style={{ width: '15rem' }}>
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmu.png" alt="Image 4" />
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title> {title4} </Card.Title>
             <Card.Text>
             Some quick example text
             </Card.Text>
@@ -81,13 +92,6 @@ export default function Slider() {
   );
 }
 
-const Detail = ({ item }) => {
-    return (
-    <>
-      {item.coverart}
-    </>
-    )
-  }
 
 
 
