@@ -3,7 +3,7 @@ import { getData } from '../utils/data';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { Container, Card } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
   
 export default function Slider() {
     const [items, setItems] = useState([]);
@@ -41,7 +41,9 @@ export default function Slider() {
 
     <SplideSlide>
     <Card style={{ width: '15rem' }}>
+    <Link to="game/Hatoful Boyfriend">
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1uul.png" alt="Image 1"/>
+    </Link>
         <Card.Body>
             <Card.Title> {title1} </Card.Title>
             <Card.Text>
@@ -53,7 +55,9 @@ export default function Slider() {
 
     <SplideSlide>
     <Card style={{ width: '15rem' }}>
+    <Link to="game/Hades">
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co39vc.png" alt="Image 2" />
+    </Link>
         <Card.Body>
             <Card.Title> {title2} </Card.Title>
             <Card.Text>
@@ -65,7 +69,9 @@ export default function Slider() {
 
     <SplideSlide>
     <Card style={{ width: '15rem' }}>
+    <Link to="game/Elden Ring">
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.png" alt="Image 3" />
+    </Link> 
         <Card.Body>
             <Card.Title> {title3} </Card.Title>
             <Card.Text>
@@ -77,7 +83,9 @@ export default function Slider() {
 
     <SplideSlide>
     <Card style={{ width: '15rem' }}>
+    <Link to="game/God of War">
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmu.png" alt="Image 4" />
+    </Link>
         <Card.Body>
             <Card.Title> {title4} </Card.Title>
             <Card.Text>
@@ -102,7 +110,15 @@ const Detail = ({ item }) => {
   }
 
 
-
+//   <Card style={{ width: '15rem' }}>
+//   <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1uul.png" alt="Image 1"/>
+//   <Card.Body>
+//       <Card.Title> {title1} </Card.Title>
+//       <Card.Text>
+//       Genre
+//       </Card.Text>
+//   </Card.Body>
+// </Card>
 
 
 
