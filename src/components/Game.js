@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
 import { getData } from '../utils/data';
 
 export default function Game() {
@@ -12,12 +13,13 @@ export default function Game() {
   },[]);
 
 
+  let { id } = useParams();
 
     return (
       <div>
         <h2> </h2>
-            {items
-            .map((item) => <Detail key={item.id} item={item} />)}
+        {items
+        .map((item) => <Detail key={item.id} item={item} />)}
       </div>
     );
   }
@@ -36,6 +38,6 @@ export default function Game() {
   }
 
   // {items
-  //   .filter(item => item.category.title === 'Hatoful Boyfriend')
+  //   .filter(item => item.title === 'Hatoful Boyfriend')
   //   .map((item) => <Detail key={item.id} item={item} />)}
   

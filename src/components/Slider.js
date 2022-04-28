@@ -14,6 +14,9 @@ export default function Slider() {
         })
     
     },[]);
+
+    let pic = items.filter(item => item.title === 'Hatoful Boyfriend').map((item) => <Detail key={item.id} item={item}/>)
+    console.log(pic)
       
   return (
     <Container>
@@ -78,8 +81,15 @@ export default function Slider() {
   );
 }
 
-// const Detail = ({ item }) => {
-//     return (
-//       <img src={item.coverart}></img>
-//     )
-//   }
+const Detail = ({ item }) => {
+    return (
+    <>
+      {item.coverart}
+    </>
+    )
+  }
+
+
+
+
+
