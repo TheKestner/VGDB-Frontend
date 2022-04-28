@@ -19,6 +19,7 @@ export default function Game() {
       <div>
         <h2> </h2>
         {items
+        .filter(item => item.id == id)
         .map((item) => <Detail key={item.id} item={item} />)}
       </div>
     );
