@@ -40,7 +40,7 @@ export default function Game() {
           <h4 className="gamedetail">{item.company}</h4>
           </Row>
           <div className="genre"> Genre: {item.genre}</div>
-            <div className="platform"> Platforms: {item.platforms}</div>
+            <div className="platform"> Platforms: {item.platforms} </div>
             <div className="perspective"> Player Perspective: {item.perspective}</div>
             <div className="about"> {item.about}</div>
             <div className="franchise"> {item.franchise}</div>
