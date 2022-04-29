@@ -41,6 +41,7 @@ export default function Game() {
           </Row>
           <div className="genre"> Genre: {item.genre.join(", ")}</div>
             <div className="platform"> Platforms: {item.platforms.join(", ")} </div>
+            <div className="mode"> Game Modes: {item.mode.join(", ")}</div>
             <div className="perspective"> Player Perspective: {item.perspective}</div>
             <div className="about"> {item.about}</div>
             <div className="franchise"> {item.franchise}</div>
