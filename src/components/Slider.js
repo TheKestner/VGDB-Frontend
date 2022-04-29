@@ -40,9 +40,15 @@ export default function Slider() {
           perPage: 4,
           perMove: 1,
           breakpoints: {
-            640: {
-              perPage: 2,
+            1200: {
+                perPage: 3,
             },
+            990: {
+                perPage: 2,
+            },
+            530: {
+                perPage: 1,
+            }
           },
         }}
         aria-label="Popular Game Images"
