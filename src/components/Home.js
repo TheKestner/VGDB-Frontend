@@ -5,7 +5,7 @@ import Slider from "./Slider";
 export default function Home() {
   return (
     <Container>
-    <h2 clasName="popular">Popular Games</h2>
+    <h2 className="popular">Popular Games</h2>
     <Slider />
     </Container>
   );
