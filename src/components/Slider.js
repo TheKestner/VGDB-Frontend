@@ -75,7 +75,7 @@ export default function Slider() {
     <Container>
     <Splide default
         options={ {
-
+        pagination: false,
         type: 'loop',
         perPage: 4,
         perMove: 1,
