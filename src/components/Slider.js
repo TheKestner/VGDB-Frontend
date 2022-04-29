@@ -3,8 +3,8 @@ import { getData } from '../utils/data';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { Container, Card } from "react-bootstrap";
-
-
+import { Link } from "react-router-dom";
+  
 export default function Slider() {
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -15,12 +15,67 @@ export default function Slider() {
     
     },[]);
 
-    let pic = items.filter(item => item.title === 'Hatoful Boyfriend').map((item) => <Detail key={item.id} item={item}/>)
-    console.log(pic)
+    const Genre = ({ item }) => {
+        return (
+        <>
+          {item.genre[0]}
+        </>
+        )
+    }
+
+    const Detail = ({ item }) => {
+        return (
+        <>
+          {item.title}
+        </>
+        )
+    }
+
+    const Pic = ({ item }) => {
+        return (
+        <>
+          {item.coverart}
+        </>
+        )
+    }
+
+
+    // Title for each
+    let title1 = items.filter(item => item.title === 'Hatoful Boyfriend')
+    .map((item) => <Detail key={item.id} item={item}/>)
+
+    let title2 = items.filter(item => item.title === 'Hades')
+    .map((item) => <Detail key={item.id} item={item}/>)
+
+    let title3 = items.filter(item => item.title === 'Elden Ring')
+    .map((item) => <Detail key={item.id} item={item}/>)
+
+    let title4 = items.filter(item => item.title === 'God of War')
+    .map((item) => <Detail key={item.id} item={item}/>)
+
+    // Genre for each
+    let genre1 = items.filter(item => item.title === 'Hatoful Boyfriend')
+    .map((item) => <Genre key={item.id} item={item}/>)
+
+    let genre2 = items.filter(item => item.title === 'Hades')
+    .map((item) => <Genre key={item.id} item={item}/>)
+
+    let genre3 = items.filter(item => item.title === 'Elden Ring')
+    .map((item) => <Genre key={item.id} item={item}/>)
+
+    let genre4 = items.filter(item => item.title === 'God of War')
+    .map((item) => <Genre key={item.id} item={item}/>)
+
+    // image for each
+    let image1 = items.filter(item => item.title === 'Hatoful Boyfriend')
+    .map((item) => <Pic key={item.id} item={item}/>)
+    
       
   return (
     <Container>
-    <Splide options={ {
+    <Splide default
+        options={ {
+        pagination: false,
         type: 'loop',
         perPage: 4,
         perMove: 1,
@@ -30,11 +85,13 @@ export default function Slider() {
 
     <SplideSlide>
     <Card style={{ width: '15rem' }}>
+    <Link to="game/Hatoful Boyfriend">
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1uul.png" alt="Image 1"/>
+    </Link>
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title> {title1} </Card.Title>
             <Card.Text>
-            Some quick example text
+            {genre1}
             </Card.Text>
         </Card.Body>
     </Card>
@@ -42,11 +99,13 @@ export default function Slider() {
 
     <SplideSlide>
     <Card style={{ width: '15rem' }}>
+    <Link to="game/Hades">
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co39vc.png" alt="Image 2" />
+    </Link>
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title> {title2} </Card.Title>
             <Card.Text>
-            Some quick example text
+            {genre2}
             </Card.Text>
         </Card.Body>
     </Card>
@@ -54,11 +113,13 @@ export default function Slider() {
 
     <SplideSlide>
     <Card style={{ width: '15rem' }}>
+    <Link to="game/Elden Ring">
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.png" alt="Image 3" />
+    </Link> 
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title> {title3} </Card.Title>
             <Card.Text>
-            Some quick example text
+            {genre3}
             </Card.Text>
         </Card.Body>
     </Card>
@@ -66,30 +127,22 @@ export default function Slider() {
 
     <SplideSlide>
     <Card style={{ width: '15rem' }}>
+    <Link to="game/God of War">
         <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmu.png" alt="Image 4" />
+    </Link>
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title> {title4} </Card.Title>
             <Card.Text>
-            Some quick example text
+            {genre4}
             </Card.Text>
         </Card.Body>
     </Card>
-    </SplideSlide>
-
+    </SplideSlide> 
+    
   </Splide>
   </Container>
   );
 }
-
-const Detail = ({ item }) => {
-    return (
-    <>
-      {item.coverart}
-    </>
-    )
-  }
-
-
 
 
 
