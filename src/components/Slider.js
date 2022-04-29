@@ -15,6 +15,31 @@ export default function Slider() {
     
     },[]);
 
+    const Genre = ({ item }) => {
+        return (
+        <>
+          {item.genre[0]}
+        </>
+        )
+    }
+
+    const Detail = ({ item }) => {
+        return (
+        <>
+          {item.title}
+        </>
+        )
+    }
+
+    const Pic = ({ item }) => {
+        return (
+        <>
+          {item.coverart}
+        </>
+        )
+    }
+
+
     // Title for each
     let title1 = items.filter(item => item.title === 'Hatoful Boyfriend')
     .map((item) => <Detail key={item.id} item={item}/>)
@@ -40,12 +65,17 @@ export default function Slider() {
 
     let genre4 = items.filter(item => item.title === 'God of War')
     .map((item) => <Genre key={item.id} item={item}/>)
+
+    // image for each
+    let image1 = items.filter(item => item.title === 'Hatoful Boyfriend')
+    .map((item) => <Pic key={item.id} item={item}/>)
     
       
   return (
     <Container>
     <Splide default
         options={ {
+
         type: 'loop',
         perPage: 4,
         perMove: 1,
@@ -113,33 +143,6 @@ export default function Slider() {
   </Container>
   );
 }
-
-
-const Detail = ({ item }) => {
-    return (
-    <>
-      {item.title}
-    </>
-    )
-  }
-
-const Genre = ({ item }) => {
-    return (
-    <>
-      {item.genre[0]}
-    </>
-    )
-  }
-
-//   <Card style={{ width: '15rem' }}>
-//   <Card.Img variant="top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1uul.png" alt="Image 1"/>
-//   <Card.Body>
-//       <Card.Title> {title1} </Card.Title>
-//       <Card.Text>
-//       Genre
-//       </Card.Text>
-//   </Card.Body>
-// </Card>
 
 
 

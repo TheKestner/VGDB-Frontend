@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route, useParams} from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import Game from './components/Game';
@@ -32,7 +32,7 @@ root.render(
 
 
 // Route with URL param of id
-{/* <Route path="/:id" children={<Child />} /> */}
+// <Route path="/:id" children={<Child />} /> 
 
 // We can use the `useParams` hook here to access
 // the dynamic pieces of the URL.

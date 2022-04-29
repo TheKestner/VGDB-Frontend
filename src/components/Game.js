@@ -20,7 +20,7 @@ export default function Game() {
       <div>
         <h2> </h2>
         {items
-        .filter(item => item.title == title)
+        .filter(item => item.title === title)
         .map((item) => <Detail key={item.id} item={item} />)}
       </div>
     );
@@ -39,8 +39,8 @@ export default function Game() {
           <h3 className="gamedetail">{item.release_date}</h3>
           <h4 className="gamedetail">{item.company}</h4>
           </Row>
-          <div className="genre"> Genre: {item.genre}</div>
-            <div className="platform"> Platforms: {item.platforms} </div>
+          <div className="genre"> Genre: {item.genre.join(", ")}</div>
+            <div className="platform"> Platforms: {item.platforms.join(", ")} </div>
             <div className="perspective"> Player Perspective: {item.perspective}</div>
             <div className="about"> {item.about}</div>
             <div className="franchise"> {item.franchise}</div>
