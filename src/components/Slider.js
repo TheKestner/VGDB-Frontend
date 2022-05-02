@@ -14,7 +14,9 @@ export default function Slider() {
   }, []);
 
 
-  let games = items.map((item) => {
+  let games = items
+  .filter((item, idx) => idx < 9)
+  .map((item) => {
     return (
       <SplideSlide key={item.id}>
         <Card style={{ width: "15rem", margin: "auto" }}>
