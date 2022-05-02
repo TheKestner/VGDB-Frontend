@@ -13,9 +13,9 @@ export default function Slider() {
     });
   }, []);
 
-
+// .filter((item, idx) => idx <= 9)
   let games = items
-  .filter((item, idx) => idx <= 9)
+  .slice(1,10)
   .map((item) => {
     return (
       <SplideSlide key={item.id}>
