@@ -9,6 +9,7 @@ import Register from './components/Register';
 import Game from './components/Game';
 import Slider from './components/Slider';
 import Home from './components/Home';
+import Discover from './components/Discover';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
         <Route path="" element={<Home />} />
+        <Route path="discover" element={<Discover />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="game" element={<Game />}/>
