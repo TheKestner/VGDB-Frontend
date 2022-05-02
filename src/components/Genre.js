@@ -17,7 +17,7 @@ export default function Genre() {
     return (
         <div>
         {items
-        .filter(item => item.genre == genre)
+        .filter(item => item.title === genre)
         .map((item) => <Detail key={item.id} item={item} />)}
         </div>
     );
@@ -25,7 +25,7 @@ export default function Genre() {
 
 const Detail = ({ item }) => {
   return (
-    <Container key={item.id} fluid="md">
+    <Container fluid="md">
     <Row>
       <Col className="gameArt">
         <img src={item.coverart}></img>

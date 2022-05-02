@@ -5,16 +5,18 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 export default function Discover() {
   const [items, setItems] = useState([]);
+  const [games, setGames] = useState([]);
   useEffect(() => {
       getData()
       .then((data) => {
-      setItems(data)
+        setItems(data)
+        setGames(data)
       })
   
   },[]);
 
 
-  let games = items
+  let rendergames = games
   .map((item) => {
     return (
       <Container key={item.id} fluid="md">
@@ -38,11 +40,8 @@ export default function Discover() {
   });
 
   const getPc = () => {
-    games
-    .filter(item => item.platforms === "PC")
-    return (
-      games
-    );
+    setGames(items
+    .filter(item => item.platforms.includes("PC")));
   };
 
       return (
@@ -57,7 +56,7 @@ export default function Discover() {
           <Button variant="outline-info" size="sm">Xbox One</Button>{' '}
           <Button variant="outline-info" size="sm">Playstation 4</Button>{' '}
           </div>
-          {games}
+          {rendergames}
         </div>
       );
   }
