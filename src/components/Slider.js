@@ -15,7 +15,7 @@ export default function Slider() {
 
 
   let games = items
-  .filter((item, idx) => idx < 9)
+  .filter((item, idx) => idx <= 9)
   .map((item) => {
     return (
       <SplideSlide key={item.id}>

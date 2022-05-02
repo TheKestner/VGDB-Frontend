@@ -14,7 +14,7 @@ export default function Discover() {
   },[]);
 
   // hook returns an object with a mapping between the URL parameter and its value.
-  let { title } = useParams();
+//   let { title } = useParams();
 
     return (
       <div>
