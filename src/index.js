@@ -10,6 +10,7 @@ import Game from './components/Game';
 import Slider from './components/Slider';
 import Home from './components/Home';
 import Discover from './components/Discover';
+import Genre from './components/Genre';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,8 @@ root.render(
         <Route path="discover" element={<Discover />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="genre" element={<Genre />} />
+          <Route path="genre/:genre" element={<Genre />}/>
         <Route path="game" element={<Game />}/>
           <Route path="game/:title" element={<Game />}/>
         <Route path="slider" element={<Slider />}/>
