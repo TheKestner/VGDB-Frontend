@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getData } from '../utils/data';
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -39,18 +39,33 @@ export default function Game() {
           <h3 className="gamedetail">{item.release_date}</h3>
           <h4 className="gamedetail">{item.company}</h4>
           </Row>
-          <div className="genre"> Genre: {item.genre.join(", ")}</div>
-            <div className="platform"> Platforms: {item.platforms.join(", ")} </div>
-            <div className="mode"> Game Modes: {item.mode.join(", ")}</div>
-            <div className="perspective"> Player Perspective: {item.perspective}</div>
+
+            <div className="genre"> Genre:<ul>{item.genre.map((item) => <li key={item}>
+            <Link to={`/genre/${item}`}>{item}</Link></li> )}</ul>
+            </div>
+
+            <div className="platform"> Platforms:<ul>{item.platforms.map((item) => <li key={item}>
+            <Link to={`/platform/${item}`}>{item}</Link></li> )}</ul>
+            </div>
+
+            <div className="mode"> Game Modes: <ul>{item.mode.map((item) => <li key={item}>
+            <Link to={`/mode/${item}`}>{item}</Link></li> )}</ul>
+            </div>
+            
+            <div className="perspective">Player Perspective:<ul> <li><Link to={`/perspective/${item.perspective}`}>{item.perspective}</Link></li> </ul>
+            </div>
+
             <div className="about"> {item.about}</div>
-            <div className="franchise"> {item.franchise}</div>
           </Col>
         </Row>
       </Container>
     )
   }
 
+
+
+
+  // <div className="franchise"> {item.franchise}</div>
   // {items
   //   .filter(item => item.title === 'Hatoful Boyfriend')
   //   .map((item) => <Detail key={item.id} item={item} />)}

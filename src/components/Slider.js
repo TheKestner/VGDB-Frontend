@@ -13,8 +13,10 @@ export default function Slider() {
     });
   }, []);
 
-
-  let games = items.map((item) => {
+// .filter((item, idx) => idx <= 9)
+  let games = items
+  .slice(1,10)
+  .map((item) => {
     return (
       <SplideSlide key={item.id}>
         <Card style={{ width: "15rem", margin: "auto" }}>

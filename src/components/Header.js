@@ -22,7 +22,7 @@ export default function Header() {
         <Button variant="outline-info">Search</Button>
       </Form>
           <NavDropdown title="Games" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/">Discover</NavDropdown.Item>
+            <NavDropdown.Item href="/discover">Discover</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Community" id="basic-nav-dropdown">
             <NavDropdown.Item href="#discord">Discord</NavDropdown.Item>
