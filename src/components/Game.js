@@ -56,13 +56,16 @@ export default function Game() {
             </div>
 
             <div className="about"> {item.about}</div>
-            <div className="franchise"> {item.franchise}</div>
           </Col>
         </Row>
       </Container>
     )
   }
 
+
+
+
+  // <div className="franchise"> {item.franchise}</div>
   // {items
   //   .filter(item => item.title === 'Hatoful Boyfriend')
   //   .map((item) => <Detail key={item.id} item={item} />)}
