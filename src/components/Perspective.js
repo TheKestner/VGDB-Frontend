@@ -3,7 +3,7 @@ import { getData } from "../utils/data";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link, useParams} from "react-router-dom";
 
-export default function Genre() {
+export default function Perspective() {
   const [items, setItems] = useState([]);
   useEffect(() => {
     getData().then((data) => {
@@ -11,12 +11,12 @@ export default function Genre() {
     });
   }, []);
 
-  let { genre } = useParams();
+  let { perspective } = useParams();
 
     return (
         <div>
         {items
-        .filter(item => item.genre.includes(genre))
+        .filter(item => item.perspective.includes(perspective))
         .map((item) => <Detail key={item.id} item={item} />)}
         </div>
     );
@@ -37,7 +37,7 @@ const Detail = ({ item }) => {
       <div>{item.release_date}</div>
 
       </Row>
-        <div className="platform"> Platforms: {item.platforms.join(" / ")} </div>
+      <div className="platform"> Platforms: {item.platforms.join(" / ")} </div>
       </Col>
     </Row>
   </Container>

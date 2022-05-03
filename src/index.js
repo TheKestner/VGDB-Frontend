@@ -11,6 +11,7 @@ import Slider from './components/Slider';
 import Home from './components/Home';
 import Discover from './components/Discover';
 import Genre from './components/Genre';
+import Perspective from './components/Perspective';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,6 +28,8 @@ root.render(
         <Route path="game" element={<Game />}/>
           <Route path="game/:title" element={<Game />}/>
         <Route path="slider" element={<Slider />}/>
+        <Route path="perspective" element={<Perspective />}/>
+          <Route path="perspective/:perspective" element={<Perspective />}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { useParams, Link } from "react-router-dom";
 import { getData } from '../utils/data';
-import { Container, Row, Col, Button, Tab, Tabs, TabContainer, TabContent, TabPane } from "react-bootstrap";
+import { Container, Row, Col, Button, Tab, Tabs} from "react-bootstrap";
 
 export default function Discover() {
   const [items, setItems] = useState([]);
