@@ -13,6 +13,8 @@ import Discover from './components/Discover';
 import Genre from './components/Genre';
 import Perspective from './components/Perspective';
 import Mode from './components/Mode';
+import Platform from './components/Platform';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -33,6 +35,8 @@ root.render(
           <Route path="perspective/:perspective" element={<Perspective />}/>
         <Route path="mode" element={<Mode />}/>
           <Route path="mode/:mode" element={<Mode />}/>
+        <Route path="platform" element={<Mode />}/>
+          <Route path="platform/:platform" element={<Platform />}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -39,18 +39,22 @@ export default function Game() {
           <h3 className="gamedetail">{item.release_date}</h3>
           <h4 className="gamedetail">{item.company}</h4>
           </Row>
-          Genre:
-          <Link to={`/genre/${item.genre}`}>
-          <div className="genre"> {item.genre.join(", ")}</div>
-          </Link>
-            <div className="platform"> Platforms: {item.platforms.join(", ")} </div>
-            <div className="mode"> Game Modes: {item.mode.join(", ")}</div>
-            <>
-            Player Perspective:
-            <Link to={`/perspective/${item.perspective}`}>
-            <div className="perspective">{item.perspective}</div>
-            </Link>
-            </>
+
+            <div className="genre"> Genre:<ul>{item.genre.map((item) => <li>
+            <Link to={`/genre/${item}`}>{item}</Link></li> )}</ul>
+            </div>
+
+            <div className="platform"> Platforms:<ul>{item.platforms.map((item) => <li>
+            <Link to={`/platform/${item}`}>{item}</Link></li> )}</ul>
+            </div>
+
+            <div className="mode"> Game Modes: <ul>{item.mode.map((item) => <li>
+            <Link to={`/platform/${item}`}>{item}</Link></li> )}</ul>
+            </div>
+            
+            <div className="perspective">Player Perspective:<ul><li><Link to={`/perspective/${item.perspective}`}>{item.perspective}</Link></li></ul>
+            </div>
+
             <div className="about"> {item.about}</div>
             <div className="franchise"> {item.franchise}</div>
           </Col>
