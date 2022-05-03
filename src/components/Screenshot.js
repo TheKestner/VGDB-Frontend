@@ -20,7 +20,7 @@ export default function Screenshot() {
   .map((item) => {
     return (
         item.screenshot.map((item) =>
-      <SplideSlide>
+      <SplideSlide key={item}>
         <img className="screenshot" src={item} />
       </SplideSlide>
       )
