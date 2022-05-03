@@ -40,19 +40,19 @@ export default function Game() {
           <h4 className="gamedetail">{item.company}</h4>
           </Row>
 
-            <div className="genre"> Genre:<ul>{item.genre.map((item) => <li>
+            <div className="genre"> Genre:<ul>{item.genre.map((item) => <li key={item}>
             <Link to={`/genre/${item}`}>{item}</Link></li> )}</ul>
             </div>
 
-            <div className="platform"> Platforms:<ul>{item.platforms.map((item) => <li>
+            <div className="platform"> Platforms:<ul>{item.platforms.map((item) => <li key={item}>
             <Link to={`/platform/${item}`}>{item}</Link></li> )}</ul>
             </div>
 
-            <div className="mode"> Game Modes: <ul>{item.mode.map((item) => <li>
+            <div className="mode"> Game Modes: <ul>{item.mode.map((item) => <li key={item}>
             <Link to={`/mode/${item}`}>{item}</Link></li> )}</ul>
             </div>
             
-            <div className="perspective">Player Perspective:<ul><li><Link to={`/perspective/${item.perspective}`}>{item.perspective}</Link></li></ul>
+            <div className="perspective">Player Perspective:<ul> <li><Link to={`/perspective/${item.perspective}`}>{item.perspective}</Link></li> </ul>
             </div>
 
             <div className="about"> {item.about}</div>
