@@ -17,7 +17,7 @@ export default function Genre() {
     return (
         <div>
         {items
-        .filter(item => item.title === genre)
+        .filter(item => item.genre.includes(genre))
         .map((item) => <Detail key={item.id} item={item} />)}
         </div>
     );

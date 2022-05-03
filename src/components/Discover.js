@@ -39,22 +39,57 @@ export default function Discover() {
     );
   });
 
+  const allGames = () => {
+    setGames(items);
+  };
+
   const getPc = () => {
     setGames(items
     .filter(item => item.platforms.includes("PC")));
+  };
+
+  const getMac = () => {
+    setGames(items
+    .filter(item => item.platforms.includes("Mac")));
+  };
+
+  const getLinux = () => {
+    setGames(items
+    .filter(item => item.platforms.includes("Linux")));
+  };
+
+  const getPS5 = () => {
+    setGames(items
+    .filter(item => item.platforms.includes("PlayStation 5")));
+  };
+
+  const getNin = () => {
+    setGames(items
+    .filter(item => item.platforms.includes("Nintendo Switch")));
+  };
+
+  const getXone = () => {
+    setGames(items
+    .filter(item => item.platforms.includes("Xbox One")));
+  };
+
+  const getPS4 = () => {
+    setGames(items
+    .filter(item => item.platforms.includes("PlayStation 4")));
   };
 
       return (
         <div>
           <h2> </h2>
           <div>
+          <Button onClick={allGames} variant="outline-info" size="sm">All Platforms</Button>{' '}
           <Button onClick={getPc} variant="outline-info" size="sm">PC</Button>{' '}
-          <Button variant="outline-info" size="sm">Mac</Button>{' '}
-          <Button variant="outline-info" size="sm">Linux</Button>{' '}
-          <Button variant="outline-info" size="sm">Playstation 5</Button>{' '}
-          <Button variant="outline-info" size="sm">Nintendo Switch</Button>{' '}
-          <Button variant="outline-info" size="sm">Xbox One</Button>{' '}
-          <Button variant="outline-info" size="sm">Playstation 4</Button>{' '}
+          <Button onClick={getMac} variant="outline-info" size="sm">Mac</Button>{' '}
+          <Button onClick={getLinux} variant="outline-info" size="sm">Linux</Button>{' '}
+          <Button onClick={getPS5} variant="outline-info" size="sm">Playstation 5</Button>{' '}
+          <Button onClick={getNin} variant="outline-info" size="sm">Nintendo Switch</Button>{' '}
+          <Button onClick={getXone} variant="outline-info" size="sm">Xbox One</Button>{' '}
+          <Button onClick={getPS4}variant="outline-info" size="sm">Playstation 4</Button>{' '}
           </div>
           {rendergames}
         </div>

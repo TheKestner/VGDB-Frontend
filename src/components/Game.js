@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getData } from '../utils/data';
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -39,7 +39,10 @@ export default function Game() {
           <h3 className="gamedetail">{item.release_date}</h3>
           <h4 className="gamedetail">{item.company}</h4>
           </Row>
-          <div className="genre"> Genre: {item.genre.join(", ")}</div>
+          Genre:
+          <Link to={`/genre/${item.genre}`}>
+          <div className="genre"> {item.genre.join(", ")}</div>
+          </Link>
             <div className="platform"> Platforms: {item.platforms.join(", ")} </div>
             <div className="mode"> Game Modes: {item.mode.join(", ")}</div>
             <div className="perspective"> Player Perspective: {item.perspective}</div>
