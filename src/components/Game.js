@@ -49,7 +49,7 @@ export default function Game() {
             </div>
 
             <div className="mode"> Game Modes: <ul>{item.mode.map((item) => <li>
-            <Link to={`/platform/${item}`}>{item}</Link></li> )}</ul>
+            <Link to={`/mode/${item}`}>{item}</Link></li> )}</ul>
             </div>
             
             <div className="perspective">Player Perspective:<ul><li><Link to={`/perspective/${item.perspective}`}>{item.perspective}</Link></li></ul>
