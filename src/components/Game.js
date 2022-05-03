@@ -45,7 +45,8 @@ export default function Game() {
           </Link>
             <div className="platform"> Platforms: {item.platforms.join(", ")} </div>
             <div className="mode"> Game Modes: {item.mode.join(", ")}</div>
-            <>Player Perspective:
+            <>
+            Player Perspective:
             <Link to={`/perspective/${item.perspective}`}>
             <div className="perspective">{item.perspective}</div>
             </Link>
