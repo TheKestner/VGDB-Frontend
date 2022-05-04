@@ -2,6 +2,9 @@ import React, { useState, useEffect} from "react";
 import { useParams, Link } from "react-router-dom";
 import { getData } from '../utils/data';
 import { Container, Row, Col } from "react-bootstrap";
+import Screenshot from "./Screenshot";
+
+
 
 export default function Game() {
   const [items, setItems] = useState([]);
@@ -58,6 +61,9 @@ export default function Game() {
             <div className="about"> {item.about}</div>
           </Col>
         </Row>
+        <Row>
+        <Screenshot />
+        </Row>
       </Container>
     )
   }
@@ -69,4 +75,7 @@ export default function Game() {
   // {items
   //   .filter(item => item.title === 'Hatoful Boyfriend')
   //   .map((item) => <Detail key={item.id} item={item} />)}
+
+
+  // <ul className="screen">{item.screenshot.map((item) => <li key={item}> <img src={item} /> </li> )} </ul>
   
