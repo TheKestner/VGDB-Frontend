@@ -21,11 +21,11 @@ export default function Discover() {
     return (
       <Container key={item.id} fluid="md">
         <Row>
-          <Col className="gameArt">
-            <img src={item.coverart}></img>
+          <Col>
+            <img className="gameArt" src={item.coverart}></img>
           </Col>
           <Col>
-          <Row>
+          <Row className="dRow">
           <Link to={`/game/${item.title}`}>
           <div>{item.title}</div>
           </Link>

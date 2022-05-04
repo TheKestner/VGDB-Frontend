@@ -19,7 +19,7 @@ export default function Slider() {
   .map((item) => {
     return (
       <SplideSlide key={item.id}>
-        <Card style={{ width: "15rem", margin: "auto" }}>
+        <Card style={{ margin: "auto" }}>
           <Link to={`game/${item.title}`}>
             <Card.Img variant="top" src={item.coverart} alt="Image 1" />
           </Link>
@@ -33,23 +33,23 @@ export default function Slider() {
   });
 
   return (
-    <Container>
       <Splide
         default
         options={{
+          gap: "20px",
           pagination: false,
           type: "loop",
-          perPage: 4,
+          perPage: 5,
           perMove: 1,
           breakpoints: {
             1200: {
-                perPage: 3,
+                perPage: 4,
             },
             990: {
-                perPage: 2,
+                perPage: 3,
             },
-            530: {
-                perPage: 1,
+            768: {
+              perpage: 2,
             }
           },
         }}
@@ -57,6 +57,5 @@ export default function Slider() {
       >
         {games}
       </Splide>
-    </Container>
   );
 }
