@@ -14,11 +14,14 @@ export default function Mode() {
   let { mode } = useParams();
 
     return (
-        <div>
+        <Container fluid="md">
+          <h2 className="genreT">
+            {mode}
+          </h2>
         {items
         .filter(item => item.mode.includes(mode))
         .map((item) => <Detail key={item.id} item={item} />)}
-        </div>
+        </Container>
     );
   }
 

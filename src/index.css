@@ -6,6 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.popular{
+  text-decoration:underline;
+  text-decoration-color:gold;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -23,28 +27,19 @@ li {
   width: auto;
 }
 
+/* Splide */
 .splide__slide img {
   width: 100%;
   height: 100%;
 }
 
-.listImg{
-  width: auto;
-  height: 75px;
-
+.splide__track{
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 
-.gameArt{
-  width: auto;
-  height: 95px;
-}
-
-.art{
-  width: auto;
-  height: 95px;
-}
-
+/* home page lists */
 .list ul{
   margin: 0;
   padding: 0;
@@ -59,41 +54,54 @@ li {
   margin-right: 2rem;
 }
 
-
-
 .list a{
   text-decoration: none;
 }
+
+.listImg{
+  width: auto;
+  height: 75px;
+
+}
+
+.word{
+  text-decoration:underline;
+  text-decoration-color:gold;
+}
+
+/* each game detail link */
 
 .dRow a{
   text-decoration: none;
 }
 
-
-/* .gamedetail {
-float:left;
-} */
-
-
-/* .thumbnails {
-  display: flex;
-  margin: 1rem auto 0;
-  padding: 0;
-  justify-content: center;
+.dCol{
+  margin-bottom: 20px;
 }
 
-
-.thumbnail {
-  width: 70px;
-  height: 70px;
-  overflow: hidden;
-  list-style: none;
-  margin: 0 0.2rem;
-  cursor: pointer;
+.art{
+  width: auto;
+  height: 95px;
+  margin-bottom: 20px;
 }
 
+/* navbar */
+.navbar{
+  margin-bottom: 20px;
+}
 
-.thumbnail img {
-  width: 100%;
-  height: auto;
+/* discover channel */
+.tab-content>.tab-pane {
+  margin-bottom: 20px;
+}
+
+.gameArt{
+  width: auto;
+  height: 95px;
+  margin-bottom: 20px;
+}
+
+/* .genreT{
+  text-decoration:underline;
+  text-decoration-color:gold;
 } */

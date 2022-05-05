@@ -14,11 +14,14 @@ export default function Platform() {
   let { platform } = useParams();
 
     return (
-        <div>
+        <Container fluid="md">
+          <h2 className="genreT">
+            {platform}
+          </h2>
         {items
         .filter(item => item.platforms.includes(platform))
         .map((item) => <Detail key={item.id} item={item} />)}
-        </div>
+        </Container>
     );
   }
 

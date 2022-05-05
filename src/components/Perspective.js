@@ -14,11 +14,14 @@ export default function Perspective() {
   let { perspective } = useParams();
 
     return (
-        <div>
+        <Container fluid="md">
+          <h2 className="genreT">
+            {perspective}
+          </h2>
         {items
         .filter(item => item.perspective.includes(perspective))
         .map((item) => <Detail key={item.id} item={item} />)}
-        </div>
+        </Container>
     );
   }
 

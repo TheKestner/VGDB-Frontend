@@ -16,7 +16,7 @@ export default function Home() {
         <Indielist />
       </Col>
       <Col className="list">
-        <h3>Play With Friends</h3>
+        <h3 className="word">Play With Friends</h3>
         <Friendlist />
       </Col>
     </Row>
