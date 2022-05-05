@@ -6,10 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .popular{
   text-decoration:underline;
   text-decoration-color:gold;
+  position: relative;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -88,6 +91,7 @@ li {
 /* navbar */
 .navbar{
   margin-bottom: 20px;
+  background-color: #323A45;
 }
 
 /* discover channel */
