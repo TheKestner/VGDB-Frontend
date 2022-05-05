@@ -151,8 +151,12 @@ export default function Discover() {
 
 
       return (
-        <div>
-          <h2> </h2>
+        <Container fluid="md">
+          <Row>
+            <h2>
+              Discover
+            </h2>
+          </Row>
           <Tabs defaultActiveKey="platform" id="uncontrolled-tab-example" className="mb-3">
             <Tab eventKey="platform" title="Platforms">
               <Button onClick={allGames} variant="outline-info" size="sm">All Games</Button>{' '}
@@ -188,7 +192,7 @@ export default function Discover() {
             </Tab>
           </Tabs>
           {rendergames}
-        </div>
+        </Container>
       );
   }
 
