@@ -14,6 +14,7 @@ import Genre from './components/Genre';
 import Perspective from './components/Perspective';
 import Mode from './components/Mode';
 import Platform from './components/Platform';
+import Search from './components/Search';
 
 
 
@@ -38,6 +39,8 @@ root.render(
           <Route path="mode/:mode" element={<Mode />}/>
         <Route path="platform" element={<Mode />}/>
           <Route path="platform/:platform" element={<Platform />}/>
+        <Route path="search" element={<Search />}/>
+          <Route path="search/:title" element={<Search />}/>
         </Route>
       </Routes>
     </BrowserRouter>
