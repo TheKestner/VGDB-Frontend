@@ -36,7 +36,7 @@ export default function Game() {
           <Col className="gameArt">
             <img src={item.coverart}></img>
           </Col>
-          <Col>
+          <Col className="dRow">
           <Row>
           <h2 className="gamedetail">{item.title}</h2>
           <h3 className="gamedetail">{item.release_date}</h3>

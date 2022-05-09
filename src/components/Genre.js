@@ -14,11 +14,14 @@ export default function Genre() {
   let { genre } = useParams();
 
     return (
-        <div>
+        <Container fluid="md">
+          <h2 className="genreT">
+            {genre}
+          </h2>
         {items
         .filter(item => item.genre.includes(genre))
         .map((item) => <Detail key={item.id} item={item} />)}
-        </div>
+        </Container>
     );
   }
 
@@ -26,11 +29,11 @@ const Detail = ({ item }) => {
   return (
     <Container fluid="md">
     <Row>
-      <Col className="gameArt">
-        <img src={item.coverart}></img>
-      </Col>
       <Col>
-      <Row>
+        <img className="art" src={item.coverart}></img>
+      </Col>
+      <Col className="dCol">
+      <Row className="dRow">
       <Link to={`/game/${item.title}`}>
       <div>{item.title}</div>
       </Link>

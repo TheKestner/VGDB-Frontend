@@ -14,11 +14,14 @@ export default function Platform() {
   let { platform } = useParams();
 
     return (
-        <div>
+        <Container fluid="md">
+          <h2 className="genreT">
+            {platform}
+          </h2>
         {items
         .filter(item => item.platforms.includes(platform))
         .map((item) => <Detail key={item.id} item={item} />)}
-        </div>
+        </Container>
     );
   }
 
@@ -26,11 +29,11 @@ const Detail = ({ item }) => {
   return (
     <Container fluid="md">
     <Row>
-      <Col className="gameArt">
-        <img src={item.coverart}></img>
+      <Col>
+        <img className="art" src={item.coverart}></img>
       </Col>
       <Col>
-      <Row>
+      <Row className="dRow">
       <Link to={`/game/${item.title}`}>
       <div>{item.title}</div>
       </Link>

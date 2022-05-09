@@ -1,25 +1,54 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import { Nav, Navbar, NavDropdown, NavLink, Container, Form, FormControl, Button} from 'react-bootstrap'
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
+import { getSearch } from "../utils/data";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Header() {
 
+  // const [items, setItems] = useState([]);
+  const [games, setGames] = useState([]);
+  // useEffect(() => {
+  //     getSearch()
+  //     .then((data) => {
+  //     setItems(data)
+  //     })
+  
+  // },[]);
+
+  let navigate = useNavigate();
+
+  const searchChangeHandler = (e) => {
+    setGames(e.target.value);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    navigate(`search/${games}`);
+    setGames('');
+
+  };
+
   return (
     <div>
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar variant="dark" expand="lg">
     <Container>
       <Navbar.Brand href="/">VGDB</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-        <Form className="d-flex">
+        <Form onSubmit={submitHandler} className="d-flex">
         <FormControl
+          value={games}
+          onChange={searchChangeHandler}
           type="search"
           placeholder="Search"
           className="me-2"
           aria-label="Search"
+          
         />
-        <Button variant="outline-info">Search</Button>
+        <Button type='submit' variant="outline-info">Search</Button>
       </Form>
           <NavDropdown title="Games" id="basic-nav-dropdown">
             <NavDropdown.Item href="/discover">Discover</NavDropdown.Item>
