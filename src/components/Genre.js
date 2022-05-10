@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getData } from "../utils/data";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link, useParams} from "react-router-dom";
 
 export default function Genre() {
@@ -27,12 +27,12 @@ export default function Genre() {
 
 const Detail = ({ item }) => {
   return (
-    <Container fluid="md">
+
     <Row>
-      <Col>
+      <Col sm={1}>
         <img className="art" src={item.coverart}></img>
       </Col>
-      <Col className="dCol">
+      <Col className="dCol" lg={6}>
       <Row className="dRow">
       <Link to={`/game/${item.title}`}>
       <div>{item.title}</div>
@@ -40,9 +40,8 @@ const Detail = ({ item }) => {
       <div>{item.release_date}</div>
 
       </Row>
-        <div className="platform"> Platforms: {item.platforms.join(" / ")} </div>
+        <div className="platform"> {item.platforms.join(" / ")} </div>
       </Col>
     </Row>
-  </Container>
   );
 };

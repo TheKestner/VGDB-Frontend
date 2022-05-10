@@ -14,18 +14,28 @@ export default function Friendlist() {
     
       return (
           <div>
+            <ul>
           {items
           .filter(item => item.mode.includes("Multiplayer"))
           .slice(0,7)
           .map((item) => <Detail key={item.id} item={item} />)}
+          </ul>
           </div>
       );
     }
 
     const Detail = ({ item }) => {
         return (
-            <ul>
-                <li><img className="listImg" src={item.coverart}></img><Link to={`/game/${item.title}`}>{item.title}</Link></li>
-            </ul>
+          <div className="listCon">
+                <li>
+                  <div className="listRow">
+                  <img className="listImg" src={item.coverart}></img>
+                  <div className="listTxt">
+                  <Link to={`/game/${item.title}`}>{item.title}</Link>
+                  {item.release_date}
+                  </div>
+                  </div>
+                </li>
+            </div>
             );
         };
