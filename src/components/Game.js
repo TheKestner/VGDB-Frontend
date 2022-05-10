@@ -38,9 +38,9 @@ export default function Game() {
           </Col>
           <Col className="dRow">
           <Row>
-          <h2 className="gamedetail">{item.title}</h2>
-          <h3 className="gamedetail">{item.release_date}</h3>
-          <h4 className="gamedetail">{item.company}</h4>
+          <h2 className="gameTitle">{item.title}</h2>
+          <h3 className="gameDate">{item.release_date}</h3>
+          <h4 className="gameSub">{item.company}</h4>
           </Row>
 
             <div className="genre"> Genre:<ul>{item.genre.map((item) => <li key={item}>

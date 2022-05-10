@@ -23,6 +23,12 @@ return (
     {items
     .filter(item => item.title.includes(title))
     .map((item) => <Detail key={item.id} item={item} />)}
+    {items
+    .filter(item => item.genre.includes(title))
+    .map((item) => <Detail key={item.id} item={item} />)}
+    {items
+    .filter(item => item.platforms.includes(title))
+    .map((item) => <Detail key={item.id} item={item} />)}
     </Container>
 );
 }
