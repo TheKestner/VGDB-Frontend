@@ -24,9 +24,16 @@ export default function Indielist() {
 
     const Detail = ({ item }) => {
         return (
-                <li>
-                    <img className="listImg" src={item.coverart}></img>
-                    <Link to={`/game/${item.title}`}>{item.title}</Link>
-                </li>
+          <div className="listCon">
+            <li>
+              <div className="listRow">
+              <img className="listImg" src={item.coverart}></img>
+              <div className="listTxt">
+              <Link to={`/game/${item.title}`}>{item.title}</Link>
+              {item.release_date}
+              </div>
+              </div>
+            </li>
+          </div>
             );
         };

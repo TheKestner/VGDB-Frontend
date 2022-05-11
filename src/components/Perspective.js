@@ -29,10 +29,10 @@ const Detail = ({ item }) => {
   return (
     <Container fluid="md">
     <Row>
-      <Col>
+      <Col sm={1}>
         <img className="art" src={item.coverart}></img>
       </Col>
-      <Col>
+      <Col lg={7}>
       <Row className="dRow">
       <Link to={`/game/${item.title}`}>
       <div>{item.title}</div>
@@ -40,7 +40,7 @@ const Detail = ({ item }) => {
       <div>{item.release_date}</div>
 
       </Row>
-      <div className="platform"> Platforms: {item.platforms.join(" / ")} </div>
+      <div className="platform">{item.platforms.join(" / ")} </div>
       </Col>
     </Row>
   </Container>

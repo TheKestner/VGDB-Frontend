@@ -23,13 +23,21 @@ return (
     {items
     .filter(item => item.title.includes(title))
     .map((item) => <Detail key={item.id} item={item} />)}
+    {items
+    .filter(item => item.genre.includes(title))
+    .map((item) => <Detail key={item.id} item={item} />)}
+    {items
+    .filter(item => item.platforms.includes(title))
+    .map((item) => <Detail key={item.id} item={item} />)}
     </Container>
 );
 }
 
+
 const Detail = ({ item }) => {
 return (
 <Container fluid="md">
+  
 <Row>
   <Col>
     <img className="art" src={item.coverart}></img>

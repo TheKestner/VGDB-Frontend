@@ -49,7 +49,7 @@ export default function Slider() {
                 perPage: 3,
             },
             768: {
-              perpage: 2,
+                perpage: 2,
             }
           },
         }}
