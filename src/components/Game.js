@@ -47,8 +47,11 @@ export default function Game() {
       // const formData = new FormData(form);
       // formData.append("User", user_id[1]);
       // formData.append("Game", game_id);
-      console.log("we outcea")
+      console.log("we outtie")
     };
+
+    const edited = item;
+
 
     return (
       <Container fluid="md">
@@ -56,7 +59,11 @@ export default function Game() {
           <Col className="gameArt">
             <img src={item.coverart}></img>
             <Row>
+              {edited ? (
             <Button onClick={followGame} variant="info">Follow</Button>
+              ) : (
+            <Button variant="info">Followed</Button>
+              )}
             </Row>
           </Col>
           <Col className="dRow">
