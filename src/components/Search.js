@@ -33,9 +33,11 @@ return (
 );
 }
 
+
 const Detail = ({ item }) => {
 return (
 <Container fluid="md">
+  
 <Row>
   <Col>
     <img className="art" src={item.coverart}></img>
