@@ -1,20 +1,30 @@
 import React, { useState, useEffect} from "react";
 import { useParams, Link } from "react-router-dom";
-import { getData } from '../utils/data';
-import { Container, Row, Col } from "react-bootstrap";
+import { addFav, getData, getFav } from '../utils/data';
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Screenshot from "./Screenshot";
 
 
 
 export default function Game() {
   const [items, setItems] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   useEffect(() => {
       getData()
       .then((data) => {
       setItems(data)
       })
-  
+      getFav()
+      .then((data) => {
+      setFavorites(data)
+      })
   },[]);
+
+  console.log(favorites)
+
+  // const unfollowGame = (e) => {
+
+  // };
 
   // hook returns an object with a mapping between the URL parameter and its value.
   let { title } = useParams();
@@ -30,11 +40,24 @@ export default function Game() {
   }
 
   const Detail = ({ item }) => {
+
+    const followGame = (e) => {
+      e.preventDefault();
+      addFav(item.id,1);
+      // const formData = new FormData(form);
+      // formData.append("User", user_id[1]);
+      // formData.append("Game", game_id);
+      console.log("we outcea")
+    };
+
     return (
       <Container fluid="md">
         <Row>
           <Col className="gameArt">
             <img src={item.coverart}></img>
+            <Row>
+            <Button onClick={followGame} variant="info">Follow</Button>
+            </Row>
           </Col>
           <Col className="dRow">
           <Row>
