@@ -15,6 +15,7 @@ import Perspective from './components/Perspective';
 import Mode from './components/Mode';
 import Platform from './components/Platform';
 import Search from './components/Search';
+import Followed from './components/Follow';
 
 
 
@@ -28,19 +29,15 @@ root.render(
         <Route path="discover" element={<Discover />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="genre" element={<Genre />} />
-          <Route path="genre/:genre" element={<Genre />}/>
-        <Route path="game" element={<Game />}/>
-          <Route path="game/:title" element={<Game />}/>
+        <Route path="genre/:genre" element={<Genre />}/>
+        <Route path="game/:title" element={<Game />}/>
         <Route path="slider" element={<Slider />}/>
-        <Route path="perspective" element={<Perspective />}/>
-          <Route path="perspective/:perspective" element={<Perspective />}/>
-        <Route path="mode" element={<Mode />}/>
-          <Route path="mode/:mode" element={<Mode />}/>
-        <Route path="platform" element={<Mode />}/>
-          <Route path="platform/:platform" element={<Platform />}/>
-        <Route path="search" element={<Search />}/>
-          <Route path="search/:title" element={<Search />}/>
+        <Route path="perspective/:perspective" element={<Perspective />}/>
+        <Route path="mode/:mode" element={<Mode />}/>
+        <Route path="platform/:platform" element={<Platform />}/>
+        <Route path="search/:title" element={<Search />}/>
+        <Route path="followed" element={<Followed />}/>
+        
         </Route>
       </Routes>
     </BrowserRouter>

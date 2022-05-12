@@ -1,20 +1,30 @@
 import React, { useState, useEffect} from "react";
 import { useParams, Link } from "react-router-dom";
-import { getData } from '../utils/data';
-import { Container, Row, Col } from "react-bootstrap";
+import { addFav, getData, getFav } from '../utils/data';
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Screenshot from "./Screenshot";
 
 
 
 export default function Game() {
   const [items, setItems] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   useEffect(() => {
       getData()
       .then((data) => {
       setItems(data)
       })
-  
+      getFav()
+      .then((data) => {
+      setFavorites(data)
+      })
   },[]);
+
+  console.log(favorites)
+
+  // const unfollowGame = (e) => {
+
+  // };
 
   // hook returns an object with a mapping between the URL parameter and its value.
   let { title } = useParams();
@@ -30,11 +40,50 @@ export default function Game() {
   }
 
   const Detail = ({ item }) => {
+
+    const [favorites, setFavorites] = useState([]);
+    useEffect(() => {
+        getFav()
+        .then((data) => {
+        setFavorites(data)
+        })
+    },[]);
+
+    const followGame = (e) => {
+      e.preventDefault();
+      addFav(item.id,1);
+      // const formData = new FormData(form);
+      // formData.append("User", user_id[1]);
+      // formData.append("Game", game_id);
+      console.log("we outtie")
+    };
+    console.log(favorites)
+    // const found = favorites.find((item) => item === item.id)
+    // console.log(found)
+    console.log(item.id)
+    const favgame = favorites.find( ({game}) => game === item.id );
+    console.log(favgame)
+
+    const MyButtons = () => {
+      if(favgame && favgame.game === item.id ) {
+        return <Button variant="info">Followed</Button>
+      }
+      else {
+        return <Button onClick={followGame} variant="info">Follow</Button>
+      }
+    }
+
+
+
+
     return (
       <Container fluid="md">
         <Row>
           <Col className="gameArt">
             <img src={item.coverart}></img>
+            <Row>
+              <MyButtons />
+            </Row>
           </Col>
           <Col className="dRow">
           <Row>
@@ -71,11 +120,9 @@ export default function Game() {
 
 
 
-  // <div className="franchise"> {item.franchise}</div>
-  // {items
-  //   .filter(item => item.title === 'Hatoful Boyfriend')
-  //   .map((item) => <Detail key={item.id} item={item} />)}
-
-
-  // <ul className="screen">{item.screenshot.map((item) => <li key={item}> <img src={item} /> </li> )} </ul>
+  // {found ? (
+  //   <Button onClick={followGame} variant="info">Follow</Button>
+  //     ) : (
+  //   <Button variant="info">Followed</Button>
+  //     )}
   
