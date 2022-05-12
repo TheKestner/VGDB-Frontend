@@ -25,7 +25,7 @@ export async function addFav(game, user) {
 
 export async function delFav() {
     let response = await axios.delete(`https://8000-thekestner-vgdbbackend-fuft7n78fv1.ws-us44.gitpod.io/fav/`, {
-        game
+
     });
     return response.data;
 }

@@ -36,8 +36,6 @@ root.render(
         <Route path="mode/:mode" element={<Mode />}/>
         <Route path="platform/:platform" element={<Platform />}/>
         <Route path="search/:title" element={<Search />}/>
-        <Route path="followed" element={<Followed />}/>
-        
         </Route>
       </Routes>
     </BrowserRouter>
