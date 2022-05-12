@@ -64,13 +64,13 @@ export default function Game() {
     return (
       <Container fluid="md">
         <Row>
-          <Col className="detailArt">
+          <Col className="detailArt" xl={3} lg={4} xs={12}>
             <img src={item.coverart}></img>
             <Row className="btnRow">
               <MyButtons />
             </Row>
           </Col>
-          <Col className="dRow">
+          <Col className="dRow" xl={7} lg={6} xs={12}>
           <Row>
           <h2 className="gameTitle">{item.title}</h2>
           <h3 className="gameDate">{item.release_date}</h3>
