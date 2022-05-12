@@ -14,11 +14,11 @@ useEffect(() => {
 
 },[]);
 
-
+console.log(items)
 return (
     <Container fluid="md">
     {items
-    .filter(item => item.fav.includes(game))
+    .filter(item => item.includes(game))
     .map((item) => <Detail key={item.id} item={item} />)}
     </Container>
 );
