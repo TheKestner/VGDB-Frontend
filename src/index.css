@@ -101,6 +101,17 @@ li {
 
 /* each game detail link */
 
+.btnRow{
+  width: 260px;
+  position: relative;
+  left: 13px;
+  margin-top: 20%;
+}
+
+.btn.btn-info {
+  margin-top: 25px;
+}
+
 .dRow a{
   text-decoration: none;
 }
@@ -145,7 +156,34 @@ li {
   margin-bottom: 20px;
 }
 
-/* .genreT{
-  text-decoration:underline;
-  text-decoration-color:gold;
-} */
+
+/* game detail txt */
+.detailArt{
+  width: auto;
+  height: 95px;
+  margin-bottom: 20px;
+}
+
+.title{
+  font-weight: 600;
+  font-size: 12.992px;
+}
+.about{
+  font-size: 12.992px;
+}
+
+.perspective{
+  font-size: 12.992px;
+}
+
+.mode{
+  font-size: 12.992px;
+}
+
+.platform{
+  font-size: 12.992px;
+}
+
+.genre{
+  font-size: 12.992px;
+}
