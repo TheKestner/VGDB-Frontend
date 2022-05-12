@@ -15,7 +15,6 @@ import Perspective from './components/Perspective';
 import Mode from './components/Mode';
 import Platform from './components/Platform';
 import Search from './components/Search';
-import Followed from './components/Follow';
 
 
 
