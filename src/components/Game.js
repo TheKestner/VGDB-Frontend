@@ -65,11 +65,11 @@ export default function Game() {
     console.log(favgame)
 
     const MyButtons = () => {
-      if(favgame === item.id ) {
-        return <Button onClick={followGame} variant="info">Follow</Button>
+      if(favgame && favgame.game === item.id ) {
+        return <Button variant="info">Followed</Button>
       }
       else {
-        return <Button variant="info">Followed</Button>
+        return <Button onClick={followGame} variant="info">Follow</Button>
       }
     }
 

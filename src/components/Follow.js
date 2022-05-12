@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { getData, getFav, getSearch } from '../utils/data';
 
-export default function Search() {
+export default function Followed() {
 
 const [items, setItems] = useState([]);
 useEffect(() => {
