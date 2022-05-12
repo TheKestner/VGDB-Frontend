@@ -41,6 +41,14 @@ export default function Game() {
 
   const Detail = ({ item }) => {
 
+    const [favorites, setFavorites] = useState([]);
+    useEffect(() => {
+        getFav()
+        .then((data) => {
+        setFavorites(data)
+        })
+    },[]);
+
     const followGame = (e) => {
       e.preventDefault();
       addFav(item.id,1);
@@ -49,8 +57,23 @@ export default function Game() {
       // formData.append("Game", game_id);
       console.log("we outtie")
     };
+    console.log(favorites)
+    // const found = favorites.find((item) => item === item.id)
+    // console.log(found)
+    console.log(item.id)
+    const favgame = favorites.find( ({game}) => game === item.id );
+    console.log(favgame)
 
-    const edited = item;
+    const MyButtons = () => {
+      if(favgame === item.id ) {
+        return <Button onClick={followGame} variant="info">Follow</Button>
+      }
+      else {
+        return <Button variant="info">Followed</Button>
+      }
+    }
+
+
 
 
     return (
@@ -59,11 +82,7 @@ export default function Game() {
           <Col className="gameArt">
             <img src={item.coverart}></img>
             <Row>
-              {edited ? (
-            <Button onClick={followGame} variant="info">Follow</Button>
-              ) : (
-            <Button variant="info">Followed</Button>
-              )}
+              <MyButtons />
             </Row>
           </Col>
           <Col className="dRow">
@@ -101,11 +120,9 @@ export default function Game() {
 
 
 
-  // <div className="franchise"> {item.franchise}</div>
-  // {items
-  //   .filter(item => item.title === 'Hatoful Boyfriend')
-  //   .map((item) => <Detail key={item.id} item={item} />)}
-
-
-  // <ul className="screen">{item.screenshot.map((item) => <li key={item}> <img src={item} /> </li> )} </ul>
+  // {found ? (
+  //   <Button onClick={followGame} variant="info">Follow</Button>
+  //     ) : (
+  //   <Button variant="info">Followed</Button>
+  //     )}
   
