@@ -39,10 +39,10 @@ return (
 <Container fluid="md">
   
 <Row>
-  <Col>
+  <Col lg={1}>
     <img className="art" src={item.coverart}></img>
   </Col>
-  <Col className="dCol">
+  <Col className="dCol" lg={6}>
   <Row className="dRow">
   <Link to={`/game/${item.title}`}>
   <div>{item.title}</div>
