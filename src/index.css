@@ -13,10 +13,18 @@ body {
   position: relative;
 }
 
+.poplular::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 20px;
+}
+
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .screenshot {
