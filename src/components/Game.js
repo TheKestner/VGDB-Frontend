@@ -8,23 +8,13 @@ import Screenshot from "./Screenshot";
 
 export default function Game() {
   const [items, setItems] = useState([]);
-  const [favorites, setFavorites] = useState([]);
   useEffect(() => {
       getData()
       .then((data) => {
       setItems(data)
       })
-      getFav()
-      .then((data) => {
-      setFavorites(data)
-      })
   },[]);
 
-  console.log(favorites)
-
-  // const unfollowGame = (e) => {
-
-  // };
 
   // hook returns an object with a mapping between the URL parameter and its value.
   let { title } = useParams();
@@ -52,17 +42,10 @@ export default function Game() {
     const followGame = (e) => {
       e.preventDefault();
       addFav(item.id,1);
-      // const formData = new FormData(form);
-      // formData.append("User", user_id[1]);
-      // formData.append("Game", game_id);
-      console.log("we outtie")
+
     };
-    console.log(favorites)
-    // const found = favorites.find((item) => item === item.id)
-    // console.log(found)
-    console.log(item.id)
+
     const favgame = favorites.find( ({game}) => game === item.id );
-    console.log(favgame)
 
     const MyButtons = () => {
       if(favgame && favgame.game === item.id ) {
@@ -73,38 +56,38 @@ export default function Game() {
       }
     }
 
-
-
-
     return (
       <Container fluid="md">
         <Row>
-          <Col className="gameArt">
-            <img src={item.coverart}></img>
-            <Row>
+          <Col className="detailArt" xl={3} lg={4} xs={12}>
+            <img src={item.coverart} alt="coverart"></img>
+            <Row className="btnRow">
               <MyButtons />
             </Row>
           </Col>
-          <Col className="dRow">
+          <Col className="dRow" xl={7} lg={6} xs={12}>
           <Row>
           <h2 className="gameTitle">{item.title}</h2>
           <h3 className="gameDate">{item.release_date}</h3>
           <h4 className="gameSub">{item.company}</h4>
           </Row>
-
-            <div className="genre"> Genre:<ul>{item.genre.map((item) => <li key={item}>
+            <div className="title">Genre:</div>
+            <div className="genre"> <ul>{item.genre.map((item) => <li key={item}>
             <Link to={`/genre/${item}`}>{item}</Link></li> )}</ul>
             </div>
 
-            <div className="platform"> Platforms:<ul>{item.platforms.map((item) => <li key={item}>
+            <div className="title">Platforms:</div>
+            <div className="platform"> <ul>{item.platforms.map((item) => <li key={item}>
             <Link to={`/platform/${item}`}>{item}</Link></li> )}</ul>
             </div>
 
-            <div className="mode"> Game Modes: <ul>{item.mode.map((item) => <li key={item}>
+            <div className="title">Game Modes:</div>
+            <div className="mode"> <ul>{item.mode.map((item) => <li key={item}>
             <Link to={`/mode/${item}`}>{item}</Link></li> )}</ul>
             </div>
             
-            <div className="perspective">Player Perspective:<ul> <li><Link to={`/perspective/${item.perspective}`}>{item.perspective}</Link></li> </ul>
+            <div className="title">Player Perspective:</div>
+            <div className="perspective"> <ul> <li><Link to={`/perspective/${item.perspective}`}>{item.perspective}</Link></li> </ul>
             </div>
 
             <div className="about"> {item.about}</div>
@@ -117,12 +100,4 @@ export default function Game() {
     )
   }
 
-
-
-
-  // {found ? (
-  //   <Button onClick={followGame} variant="info">Follow</Button>
-  //     ) : (
-  //   <Button variant="info">Followed</Button>
-  //     )}
   

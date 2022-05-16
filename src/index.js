@@ -15,7 +15,6 @@ import Perspective from './components/Perspective';
 import Mode from './components/Mode';
 import Platform from './components/Platform';
 import Search from './components/Search';
-import Followed from './components/Follow';
 
 
 
@@ -36,8 +35,6 @@ root.render(
         <Route path="mode/:mode" element={<Mode />}/>
         <Route path="platform/:platform" element={<Platform />}/>
         <Route path="search/:title" element={<Search />}/>
-        <Route path="followed" element={<Followed />}/>
-        
         </Route>
       </Routes>
     </BrowserRouter>
