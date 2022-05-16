@@ -248,7 +248,7 @@ button#uncontrolled-tab-example-tab-mode.active {
   margin-bottom: 20px;
 }
 
-.btn.btn-outline-info {
+.btn.btn-outline-secondary {
   /* color: #9146ff; */
   /* border-color: #9147ff; */
   background-color: #f7f8fa;
@@ -256,10 +256,15 @@ button#uncontrolled-tab-example-tab-mode.active {
   color: #4E4E4E;
 }
 
-.btn.btn-outline-info:hover {
+.btn.btn-outline-secondary:hover {
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
+}
+
+.navbar-nav .dropdown-menu :hover{
+color:#212529;
+background-color: #e9ecef;
 }
 
 /* game detail txt */
