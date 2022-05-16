@@ -8,15 +8,10 @@ import Screenshot from "./Screenshot";
 
 export default function Game() {
   const [items, setItems] = useState([]);
-  const [favorites, setFavorites] = useState([]);
   useEffect(() => {
       getData()
       .then((data) => {
       setItems(data)
-      })
-      getFav()
-      .then((data) => {
-      setFavorites(data)
       })
   },[]);
 
@@ -65,7 +60,7 @@ export default function Game() {
       <Container fluid="md">
         <Row>
           <Col className="detailArt" xl={3} lg={4} xs={12}>
-            <img src={item.coverart}></img>
+            <img src={item.coverart} alt="coverart"></img>
             <Row className="btnRow">
               <MyButtons />
             </Row>

@@ -32,6 +32,7 @@ code {
   width: auto;
 }
 
+
 /* Splide */
 .card-title{
   text-overflow: ellipsis;
@@ -80,6 +81,12 @@ li {
 
 .list a{
   text-decoration: none;
+  color: #9147ff;
+}
+
+.list a:hover{
+  text-decoration: underline;
+  color: #9147ff;
 }
 
 .listImg{
@@ -106,6 +113,38 @@ li {
   text-decoration:underline;
   text-decoration-color:gold;
 }
+/* list color and hover on game details page */
+.genre a{
+  color: #9147ff;
+}
+.genre a:hover{
+  text-decoration: underline;
+  color: #9147ff;
+}
+
+.platform a{
+  color: #9147ff;
+}
+.platform a:hover{
+  text-decoration: underline;
+  color: #9147ff;
+}
+
+.mode a{
+  color: #9147ff;
+}
+.mode a:hover{
+  text-decoration: underline;
+  color: #9147ff;
+}
+
+.perspective a{
+  color: #9147ff;
+}
+.perspective a:hover{
+  text-decoration: underline;
+  color: #9147ff;
+}
 
 /* each game detail link */
 
@@ -118,10 +157,25 @@ li {
 
 .btn.btn-info {
   margin-top: 25px;
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #9147ff;
+}
+
+.btn.btn-info:hover {
+  color: #fff;
+  background-color: #7314ff;
+  border-color: #6c0aff;
 }
 
 .dRow a{
   text-decoration: none;
+  color: #9147ff;
+}
+
+.dRow a:hover{
+  text-decoration: underline;
+  color: #9147ff;
 }
 
 .dCol{
@@ -164,6 +218,19 @@ li {
   margin-bottom: 20px;
 }
 
+.btn.btn-outline-info {
+  /* color: #9146ff; */
+  /* border-color: #9147ff; */
+  background-color: #f7f8fa;
+  border-color: #dde3e8;
+  color: #4E4E4E;
+}
+
+.btn.btn-outline-info:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
 
 /* game detail txt */
 .detailArt{
