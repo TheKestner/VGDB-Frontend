@@ -212,6 +212,36 @@ li {
   margin-bottom: 20px;
 }
 
+button#uncontrolled-tab-example-tab-platform{
+  color: #333333
+}
+
+button#uncontrolled-tab-example-tab-genre{
+  color: #333333
+}
+
+button#uncontrolled-tab-example-tab-mode{
+  color: #333333
+}
+
+button#uncontrolled-tab-example-tab-platform.active {
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+button#uncontrolled-tab-example-tab-genre.active {
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+button#uncontrolled-tab-example-tab-mode.active {
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
 .gameArt{
   width: auto;
   height: 95px;
