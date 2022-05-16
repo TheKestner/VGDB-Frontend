@@ -52,7 +52,7 @@ export default function Header() {
             <NavDropdown.Item href="/discover">Discover</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Community" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#discord">Discord</NavDropdown.Item>
+            <NavDropdown.Item disabled href="#discord">Discord</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Account" id="basic-nav-dropdown">
             <NavDropdown.Item disabled href="login">Login</NavDropdown.Item>
