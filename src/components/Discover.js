@@ -21,10 +21,10 @@ export default function Discover() {
     return (
       <Container key={item.id} fluid="md">
         <Row>
-          <Col sm={2}>
+          <Col lg={1}>
             <img className="gameArt" src={item.coverart}></img>
           </Col>
-          <Col sm={6}>
+          <Col lg={7}>
           <Row className="dRow">
           <Link to={`/game/${item.title}`}>
           <div>{item.title}</div>
@@ -159,36 +159,36 @@ export default function Discover() {
           </Row>
           <Tabs defaultActiveKey="platform" id="uncontrolled-tab-example" className="mb-3">
             <Tab eventKey="platform" title="Platforms">
-              <Button onClick={allGames} variant="outline-info" size="sm">All Games</Button>{' '}
-              <Button onClick={getPc} variant="outline-info" size="sm">PC</Button>{' '}
-              <Button onClick={getMac} variant="outline-info" size="sm">Mac</Button>{' '}
-              <Button onClick={getLinux} variant="outline-info" size="sm">Linux</Button>{' '}
-              <Button onClick={getPS5} variant="outline-info" size="sm">Playstation 5</Button>{' '}
-              <Button onClick={getNin} variant="outline-info" size="sm">Nintendo Switch</Button>{' '}
-              <Button onClick={getXone} variant="outline-info" size="sm">Xbox One</Button>{' '}
-              <Button onClick={getPS4}variant="outline-info" size="sm">Playstation 4</Button>{' '}
+              <Button onClick={allGames} variant="outline-secondary" size="sm">All Games</Button>{' '}
+              <Button onClick={getPc} variant="outline-secondary" size="sm">PC</Button>{' '}
+              <Button onClick={getMac} variant="outline-secondary" size="sm">Mac</Button>{' '}
+              <Button onClick={getLinux} variant="outline-secondary" size="sm">Linux</Button>{' '}
+              <Button onClick={getPS5} variant="outline-secondary" size="sm">Playstation 5</Button>{' '}
+              <Button onClick={getNin} variant="outline-secondary" size="sm">Nintendo Switch</Button>{' '}
+              <Button onClick={getXone} variant="outline-secondary" size="sm">Xbox One</Button>{' '}
+              <Button onClick={getPS4}variant="outline-secondary" size="sm">Playstation 4</Button>{' '}
             </Tab>
 
             <Tab eventKey="genre" title="Genres">
-              <Button onClick={allGames} variant="outline-info" size="sm">All Games</Button>{' '}
-              <Button onClick={getRPG} variant="outline-info" size="sm">Role-Playing (RPG)</Button>{' '}
-              <Button onClick={getShooter} variant="outline-info" size="sm">Shooter</Button>{' '}
-              <Button onClick={getAdv} variant="outline-info" size="sm">Adventure</Button>{' '}
-              <Button onClick={getRacing} variant="outline-info" size="sm">Racing</Button>{' '}
-              <Button onClick={getIndie} variant="outline-info" size="sm">Indie</Button>{' '}
-              <Button onClick={getHack} variant="outline-info" size="sm">Hack and slash/Beat 'em up</Button>{' '}
-              <Button onClick={getPuzzle} variant="outline-info" size="sm">Puzzle</Button>{' '}
-              <Button onClick={getSport} variant="outline-info" size="sm">Sport</Button>{' '}
-              <Button onClick={getArcade} variant="outline-info" size="sm">Arcade</Button>{' '}
-              <Button onClick={getTurn} variant="outline-info" size="sm">Turn-based strategy (TBS)</Button>{' '}
-              <Button onClick={getPlatform} variant="outline-info" size="sm">Platform</Button>{' '}
-              <Button onClick={getPoint} variant="outline-info" size="sm">Point-and-click</Button>{' '}
+              <Button onClick={allGames} variant="outline-secondary" size="sm">All Games</Button>{' '}
+              <Button onClick={getRPG} variant="outline-secondary" size="sm">Role-Playing (RPG)</Button>{' '}
+              <Button onClick={getShooter} variant="outline-secondary" size="sm">Shooter</Button>{' '}
+              <Button onClick={getAdv} variant="outline-secondary" size="sm">Adventure</Button>{' '}
+              <Button onClick={getRacing} variant="outline-secondary" size="sm">Racing</Button>{' '}
+              <Button onClick={getIndie} variant="outline-secondary" size="sm">Indie</Button>{' '}
+              <Button onClick={getHack} variant="outline-secondary" size="sm">Hack and slash/Beat 'em up</Button>{' '}
+              <Button onClick={getPuzzle} variant="outline-secondary" size="sm">Puzzle</Button>{' '}
+              <Button onClick={getSport} variant="outline-secondary" size="sm">Sport</Button>{' '}
+              <Button onClick={getArcade} variant="outline-secondary" size="sm">Arcade</Button>{' '}
+              <Button onClick={getTurn} variant="outline-secondary" size="sm">Turn-based strategy (TBS)</Button>{' '}
+              <Button onClick={getPlatform} variant="outline-secondary" size="sm">Platform</Button>{' '}
+              <Button onClick={getPoint} variant="outline-secondary" size="sm">Point-and-click</Button>{' '}
             </Tab>
 
             <Tab eventKey="mode" title="Modes">
-            <Button onClick={allGames} variant="outline-info" size="sm">All Games</Button>{' '}
-            <Button onClick={getMulti} variant="outline-info" size="sm">Multiplayer</Button>{' '}
-            <Button onClick={getSingle} variant="outline-info" size="sm">Singleplayer</Button>{' '}
+            <Button onClick={allGames} variant="outline-secondary" size="sm">All Games</Button>{' '}
+            <Button onClick={getMulti} variant="outline-secondary" size="sm">Multiplayer</Button>{' '}
+            <Button onClick={getSingle} variant="outline-secondary" size="sm">Singleplayer</Button>{' '}
             </Tab>
           </Tabs>
           {rendergames}

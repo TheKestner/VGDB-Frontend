@@ -1,7 +1,5 @@
-import {React, useState, useEffect} from "react";
-import { Nav, Navbar, NavDropdown, NavLink, Container, Form, FormControl, Button} from 'react-bootstrap'
-import { Navigate, useParams } from "react-router-dom";
-import { getSearch } from "../utils/data";
+import {React, useState} from "react";
+import { Nav, Navbar, NavDropdown, Container, Form, FormControl, Button} from 'react-bootstrap'
 import { useNavigate } from "react-router-dom";
 
 
@@ -48,17 +46,17 @@ export default function Header() {
           aria-label="Search"
           
         />
-        <Button type='submit' variant="outline-info">Search</Button>
+        <Button type='submit' variant="outline-light">Search</Button>
       </Form>
           <NavDropdown title="Games" id="basic-nav-dropdown">
             <NavDropdown.Item href="/discover">Discover</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Community" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#discord">Discord</NavDropdown.Item>
+            <NavDropdown.Item disabled href="#discord">Discord</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Account" id="basic-nav-dropdown">
-            <NavDropdown.Item href="login">Login</NavDropdown.Item>
-            <NavDropdown.Item href="register">Register</NavDropdown.Item>
+            <NavDropdown.Item disabled href="login">Login</NavDropdown.Item>
+            <NavDropdown.Item disabled href="register">Register</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>

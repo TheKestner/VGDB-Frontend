@@ -13,16 +13,25 @@ body {
   position: relative;
 }
 
+.poplular::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 20px;
+}
+
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .screenshot {
   height: auto;
   width: auto;
 }
+
 
 /* Splide */
 .card-title{
@@ -72,6 +81,12 @@ li {
 
 .list a{
   text-decoration: none;
+  color: #9147ff;
+}
+
+.list a:hover{
+  text-decoration: underline;
+  color: #9147ff;
 }
 
 .listImg{
@@ -98,11 +113,69 @@ li {
   text-decoration:underline;
   text-decoration-color:gold;
 }
+/* list color and hover on game details page */
+.genre a{
+  color: #9147ff;
+}
+.genre a:hover{
+  text-decoration: underline;
+  color: #9147ff;
+}
+
+.platform a{
+  color: #9147ff;
+}
+.platform a:hover{
+  text-decoration: underline;
+  color: #9147ff;
+}
+
+.mode a{
+  color: #9147ff;
+}
+.mode a:hover{
+  text-decoration: underline;
+  color: #9147ff;
+}
+
+.perspective a{
+  color: #9147ff;
+}
+.perspective a:hover{
+  text-decoration: underline;
+  color: #9147ff;
+}
 
 /* each game detail link */
 
+.btnRow{
+  width: 260px;
+  position: relative;
+  left: 13px;
+  margin-top: 20%;
+}
+
+.btn.btn-info {
+  margin-top: 25px;
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #9147ff;
+}
+
+.btn.btn-info:hover {
+  color: #fff;
+  background-color: #7314ff;
+  border-color: #6c0aff;
+}
+
 .dRow a{
   text-decoration: none;
+  color: #9147ff;
+}
+
+.dRow a:hover{
+  text-decoration: underline;
+  color: #9147ff;
 }
 
 .dCol{
@@ -139,13 +212,87 @@ li {
   margin-bottom: 20px;
 }
 
+button#uncontrolled-tab-example-tab-platform{
+  color: #333333
+}
+
+button#uncontrolled-tab-example-tab-genre{
+  color: #333333
+}
+
+button#uncontrolled-tab-example-tab-mode{
+  color: #333333
+}
+
+button#uncontrolled-tab-example-tab-platform.active {
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+button#uncontrolled-tab-example-tab-genre.active {
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+button#uncontrolled-tab-example-tab-mode.active {
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
 .gameArt{
   width: auto;
   height: 95px;
   margin-bottom: 20px;
 }
 
-/* .genreT{
-  text-decoration:underline;
-  text-decoration-color:gold;
-} */
+.btn.btn-outline-secondary {
+  /* color: #9146ff; */
+  /* border-color: #9147ff; */
+  background-color: #f7f8fa;
+  border-color: #dde3e8;
+  color: #4E4E4E;
+}
+
+.btn.btn-outline-secondary:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.navbar-nav .dropdown-menu :hover{
+color:#212529;
+background-color: #e9ecef;
+}
+
+/* game detail txt */
+.detailArt{
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.title{
+  font-weight: 600;
+  font-size: 12.992px;
+}
+.about{
+  font-size: 12.992px;
+}
+
+.perspective{
+  font-size: 12.992px;
+}
+
+.mode{
+  font-size: 12.992px;
+}
+
+.platform{
+  font-size: 12.992px;
+}
+
+.genre{
+  font-size: 12.992px;
+}
