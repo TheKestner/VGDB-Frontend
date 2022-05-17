@@ -34,6 +34,7 @@ root.render(
         <Route path="perspective/:perspective" element={<Perspective />}/>
         <Route path="mode/:mode" element={<Mode />}/>
         <Route path="platform/:platform" element={<Platform />}/>
+        <Route path="search" element={<Search />}/>
         <Route path="search/:title" element={<Search />}/>
         </Route>
       </Routes>
