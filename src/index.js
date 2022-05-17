@@ -25,12 +25,12 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
         <Route path="" element={<Home />} />
-        <Route path="discover" element={<Discover />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="genre/:genre" element={<Genre />}/>
         <Route path="game/:title" element={<Game />}/>
         <Route path="slider" element={<Slider />}/>
+        <Route path="discover" element={<Discover />} />
         <Route path="perspective/:perspective" element={<Perspective />}/>
         <Route path="mode/:mode" element={<Mode />}/>
         <Route path="platform/:platform" element={<Platform />}/>
